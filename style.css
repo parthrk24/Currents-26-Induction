@@ -1,0 +1,153 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-links{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin-right: 32px;
+    gap: 32px;
+}
+
+.nav-links a{
+    color:#c0c0c0;
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+    color: white;
+}
+
+main{
+    text-align: center;
+    padding: 100px 30px;
+}
+
+main h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: clamp(48px, 10vw, 125px);
+    margin-bottom: 10px;
+    color:#c0c0c0;
+}
+
+main h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: clamp(10px, 10vw, 24px);
+    font-weight: normal;
+    color: #c0c0c0;
+    margin-bottom: 30px;
+}
+
+main button, main a.btn-link{
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: clamp(5px, 10vw, 16px);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.6);
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+main button:hover{
+    opacity: 0.8;
+}
+
+.Socials{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+
+footer{
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    justify-content: space-between;
+    color: #8a8a8a;
+
+}
+
+footer a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: #8a8a8a;
+}
+
+footer a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.hamburger{
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span{
+    width: 25px;
+    height: 3px;
+    background: #c0c0c0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px){
+    .hamburger{
+        display: flex;
+        z-index: 1100;
+    }
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.85);
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1050;
+    }
+
+    .nav-links.open{
+        display: flex;
+    }
+    
+    footer{
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    footer a{
+        margin-right: 10px;
+    }
+}
+
